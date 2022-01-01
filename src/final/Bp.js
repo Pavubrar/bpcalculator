@@ -1,6 +1,6 @@
 
 import React,{useState,useEffect} from 'react'
-import Kidney from './Kidney';
+
 
 import View from './View';
 // get data from local storage
@@ -63,9 +63,9 @@ const Data = () => {
     
 
     return (
-        <div className="wrapper">
+        <div >
             <h1>Disease Classifier</h1>
-            <div>
+
 <div className="form-container">
 <form className="form" autoComplete="off"
 onSubmit={handleClick}>
@@ -89,12 +89,9 @@ onSubmit={handleClick}>
     </div>
     </>}
 </div>
-</div> <br/>
+</div> 
+ </div>
 
-       <Kidney></Kidney>
-
-            </div>
-        </div>
     )
 }
 

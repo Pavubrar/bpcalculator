@@ -5,7 +5,8 @@ import './App.css';
 // import DatePickers from './final/DatePicker';
 // import Kidney from './components/Kidney';
 // import Report from './components/Report';
-import Data from './final/data';
+import Data from './final/Bp';
+import Kidney from './final/Kidney';
 
 
 class App extends Component {
@@ -21,8 +22,9 @@ render(){
 
   
   return (
-    <div className="App">
-    <Data />
+    <div className="wrapper">
+    <Data /><br/>
+    <Kidney></Kidney>
     </div>
   );
 }

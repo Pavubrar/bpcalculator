@@ -65,7 +65,7 @@ setStatus(`Recent readings of eGFR: ${c} & ${b} \n Your percentage drops by:  ${
         //setStatus(a) ;
      
      else {
-        setStatus(`Last recent readings od eGFR: ${c} & ${b} \n You are doing great !`) ;
+        setStatus(`Last recent readings of eGFR: ${c} & ${b} \n You are doing great !`) ;
         console.log("no data");
     }}
     
