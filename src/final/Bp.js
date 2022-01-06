@@ -52,7 +52,7 @@ const Data = () => {
                              setStatus("Normal Stage")
                          }
 
-    },[sysbp, diabp,atDate]);
+    },[sysbp, diabp]);
 
     
     //saving data ti local storage
@@ -64,28 +64,29 @@ const Data = () => {
 
     return (
         <div >
-            <h1>Disease Classifier</h1>
+            <h1 data-testid="h1">Disease Classifier</h1>
 
 <div className="form-container">
 <form className="form" autoComplete="off"
 onSubmit={handleClick}>
-            <h3> Hypertension Calculator</h3>
-<label>Enter Date</label> <span>   </span>
-<input type="date"  placeholder="Pick a date " required className="date-input"onChange={(e)=> setAtDate(e.target.value)} value={atDate}/> <br/>
-<label>Systolic Pressure</label><span>   </span>
-    <input type="number" min="115" max="180" className="sysbp-input" required  placeholder=" mmHg" onChange={(e) => setSysbp(e.target.value)} value={sysbp}></input>
+            <h3 data-testid="h2"> Hypertension Calculator</h3>
+<label data-testid="l1">Enter Date</label> <span>   </span>
+<input data-testid="input1" type="date"  placeholder="Pick a date " required className="date-input"onChange={(e)=> setAtDate(e.target.value)} value={atDate}/> <br/>
+<label data-testid="l2">Systolic Pressure</label><span>   </span>
+    <input data-testid="input2" type="number" min="115" max="180" className="sysbp-input" required  placeholder=" mmHg" onChange={(e) => setSysbp(e.target.value)} value={sysbp}></input>
     <br/>
-    <label>Diastolic Pressure</label><span>   </span>
-    <input type="number" min="60" max="120"  placeholder="mmHg "  className="diabp-input" required 
+    <label data-testid="l3">Diastolic Pressure</label><span>   </span>
+    <input data-testid="input3" type="number" min="60" max="120"  placeholder="mmHg "  className="diabp-input" required 
     onChange={(e) => setDiabp(e.target.value)} value={diabp}></input>
     <br/>
-    <button type="submit" className="btn-calc">Calculate</button>
+    <button data-testid="btn" type="submit" className="btn-calc">Calculate</button>
 </form>
 <div className="view-container">
     {bpArrays.length>0&& 
     <>
-    <div className="results">
-    <View bpArrays={bpArrays}  />
+    <div data-testid="p1" className="results">
+    
+    < View bpArrays={bpArrays}  />
     </div>
     </>}
 </div>
